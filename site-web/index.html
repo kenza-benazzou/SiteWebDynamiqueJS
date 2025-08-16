@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="utf-8">
+		<title>Les Bonnes Pièces</title>
+		<link rel="stylesheet" href="styles.css">
+		<script type="module" src="pieces.js"></script>
+		
+	</head>
+	<body>
+		<header>
+			<img src="images/logo-les-bonnes-pieces.png" alt="LOGO">
+			<h1>Les Bonnes Pièces</h1>
+		</header>
+		<main>
+			<!-- Menu de recherche -->
+			<section class="filtres">
+				<h3>Filtres</h3>
+				<button class="btn-trierc">Trier par prix croissant</button>
+				<br>
+				<button class="btn-trierd">Trier par prix décroissant</button>
+				<br>
+				<button class="btn-filtrer">Filtrer les pièces non abordables</button>
+				<br>
+				<button class="btn-description-on">Filtrer par description</button>
+				<br>
+				<p>Prix maximum :</p>
+				<input type="range" name="prix-max" id="prix-max" min="0" max="60" step="5" value="0">
+				<p>Valeur actuelle : <span id="valeur-prix-max">0</span> €</p>
+
+				<h3>Ajouter un avis</h3>
+				<div class="d-grid-sm mb-3"> 
+					<form class="formulaire-avis">
+						<span class="input-group-text" id="inputGroup-sizing-sm">Identifiant de la pièce</span>
+						<input type="text" name="piece-id" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><br>
+						
+						<span class="input-group-text" id="inputGroup-sizing-sm">Nom d'utilisateur :</span>
+						<input type="text" name="utilisateur" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><br>
+
+						<span class="input-group-text" id="inputGroup-sizing-sm">Avis :</span>
+						<input type="text" name="commentaire" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><br>
+
+						<span class="input-group-text" id="inputGroup-sizing-sm">Note (0 à 5 étoiles) :</span>
+						<input type="number" name="nbEtoiles" id="nbEtoiles" min="0" max="5" class="form-control" aria-label="Sizing example input" aria-describedby="inputGroup-sizing-sm"><br>
+
+						<button class="btn btn-primary text-align-center">Envoyer</button>
+					</form>
+					<div>
+						<h3>Données</h3>
+						<button class="btn-maj">Mettre à jour les pièces</button>
+					</div>
+				</div>
+			</section>
+
+			<!-- Fiches produits -->
+			<section class="fiches">
+			</section>
+		</main>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+	</body>
+</html>
